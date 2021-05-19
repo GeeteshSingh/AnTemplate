@@ -1,27 +1,11 @@
 import * as React from 'react'
-import { Button, View, Text, StyleSheet } from 'react-native'
+import { Button, View, Text, StyleSheet, SafeAreaView } from 'react-native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
 
 //Components
 import HomeScreen from './Components/HomeScreen'
 import AboutScreen from './Components/AboutScreen'
-
-// function HomeScreen() {
-//   return (
-//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//       <Text>Home</Text>
-//     </View>
-//   )
-// }
-
-// function AboutScreen() {
-//   return (
-//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//       <Text>About</Text>
-//     </View>
-//   )
-// }
 
 const Drawer = createDrawerNavigator()
 
@@ -36,9 +20,9 @@ function MyDrawer() {
 
 export default function App() {
   return (
-      <NavigationContainer>
-        <MyDrawer />
-      </NavigationContainer>
+    <NavigationContainer>
+      <MyDrawer />
+    </NavigationContainer>
   )
 }
 
