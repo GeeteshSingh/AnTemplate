@@ -6,6 +6,9 @@ import { NavigationContainer } from '@react-navigation/native'
 //Components
 import HomeScreen from './Components/HomeScreen'
 import AboutScreen from './Components/AboutScreen'
+import Dashboard from './Components/Dashboard'
+import Map from './Components/Map'
+
 
 const Drawer = createDrawerNavigator()
 
@@ -14,6 +17,8 @@ function MyDrawer() {
     <Drawer.Navigator>
       <Drawer.Screen name='Home' component={HomeScreen} />
       <Drawer.Screen name='About' component={AboutScreen} />
+      <Drawer.Screen name='Dashboard' component={Dashboard} />
+      <Drawer.Screen name='Map' component={Map} />
     </Drawer.Navigator>
   )
 }
@@ -29,7 +34,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff0',
+    backgroundColor: '#e0d8c3',
     alignItems: 'center',
     justifyContent: 'center'
   }

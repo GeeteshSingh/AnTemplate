@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Pressable } from 'react-native'
 import {
   Avatar,
   Button,
@@ -10,18 +10,49 @@ import {
   Colors
 } from 'react-native-paper'
 
-
-
 export default function AboutScreen() {
   return (
     <View style={styles.container}>
       <IconButton
-        icon='home-variant-outline'
-        color={Colors.red500}
+        icon='adjust'
+        color='#333333'
         size={60}
         onPress={() => console.log('Pressed')}
       />
-      <Text>hi</Text>
+      <IconButton
+        icon='alpha-a-circle'
+        color='#333333'
+        size={30}
+        onPress={() => console.log('Pressed')}
+      />
+      <IconButton
+        icon='alpha-b-circle'
+        color='#333333'
+        size={30}
+        onPress={() => console.log('Pressed')}
+      />
+      <IconButton
+        icon='alpha-o-circle'
+        color='#333333'
+        size={30}
+        onPress={() => console.log('Pressed')}
+      />
+      <IconButton
+        icon='alpha-u-circle'
+        color='#333333'
+        size={30}
+        onPress={() => console.log('Pressed')}
+      />
+      <IconButton
+        icon='alpha-t-circle'
+        color='#333333'
+        size={30}
+        onPress={() => console.log('Pressed')}
+      />
+      <Text style={styles.TextFont}>Us!</Text>
+      <Pressable onPress={onPressFunction}>
+        <Text>I'm pressable!</Text>
+      </Pressable>
     </View>
   )
 }
@@ -29,8 +60,13 @@ export default function AboutScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff0',
+    backgroundColor: '#e0d8c3',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    // paddingTop: StatusBar.currentHeight
+  },
+  TextFont: {
+    fontSize: 60,
+    fontFamily: 'sans-serif'
   }
 })
