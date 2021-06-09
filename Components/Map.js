@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
+import { Alert } from 'react-native'
 import { StyleSheet, Text, View, Dimensions, ScrollView, SafeAreaView } from 'react-native'
 import {
   Card,
   CheckBox,
   FAB,
   Header,
-  LinearProgress,ListItem, Avatar
+  LinearProgress
 } from 'react-native-elements'
 
 import MapView from 'react-native-maps'
@@ -17,9 +18,14 @@ export default function Map() {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <Header
+          placement='left'
           leftComponent={{ icon: 'menu', color: '#fff' }}
-          centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-          rightComponent={{ icon: 'home', color: '#fff'  }}
+          centerComponent={{
+            icon: 'home',
+            text: 'Find Our base Locations',
+            style: { color: '#fff', fontSize:17 }
+          }}
+          // rightComponent={{ text: 'Gawd',icon: 'home', color: '#fff' }}
         />
         <Card style={styles.cards}>
           <Card.Title>
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
     height: 390
   },
   cards: {
-    height:400,
+    height:40,
     backgroundColor: '#000000',
     fontWeight: '300',
   }

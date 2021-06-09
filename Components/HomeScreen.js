@@ -8,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons'
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <Card style={styles.cards}>
           <Card.Content>
@@ -52,7 +52,7 @@ export default function HomeScreen() {
           button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
         />
       </ScrollView>
-    </View>
+    </SafeAreaView>
   )
 }
 
